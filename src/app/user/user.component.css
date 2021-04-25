@@ -1,0 +1,85 @@
+
+.box{
+    border: 5px rgb(60, 172, 60) solid;
+    border-radius: 10px;
+    width:80%;
+    background-color: rgb(245, 184, 226);
+    color: rgb(62, 8, 122);  
+    padding: 35px;
+    margin: 70px;
+    display: flex;
+    overflow: hidden;
+}
+.box:hover{
+    border: 7px rgb(6, 87, 6) solid;
+    border-radius: 12px;
+}
+h1{
+    color: green;
+    text-align: center;
+}
+
+.box .data{
+    width:85%;
+    float: left;
+}
+.box .image{
+    width:15%;
+    float:right
+}
+img{
+    border-radius: 100px;
+
+}
+.pagination{
+    float:right;
+    margin-right: 10%;
+}
+.search{
+    overflow: hidden;
+}
+.input{
+    width:30%;
+    float:left;
+    padding:50px;
+
+}
+.option{
+    width:35%;
+    padding-left: 10px;
+    margin-top: 30px;
+    float:left;
+}
+.btn{
+    margin-top: 50px;
+    width:15%;
+    padding-left: 5%;
+    float: left;
+}
+input[type=text]{
+    width: 100%;
+    border:2px pink solid;
+    border-radius: 2px;
+
+    height: 35px;
+    
+}
+select{
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+}
+button{
+    height: 35px;
+    width:100%;
+    border:2px rgb(16, 65, 114) solid;
+    border-radius: 2px;
+}
+button:hover{
+    color: rgb(94, 14, 185);  
+    background-color: rgb(217, 158, 231);
+}
+b{
+    color:maroon
+}
+

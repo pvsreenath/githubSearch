@@ -1,0 +1,54 @@
+.box{
+    border: 5px rgb(60, 172, 60) solid;
+    border-radius: 10px;
+    width:80%;
+    background-color: rgb(245, 184, 226);
+    color: rgb(62, 8, 122);  
+    padding: 35px;
+    margin: 70px;
+    display: flex;
+    overflow: hidden;
+    
+}
+h1{
+    color: green;
+    text-align: center;
+}
+
+.box .data{
+    width:50%;
+    float: left;
+}
+.box .image{
+    width:15%;
+    float:left
+}
+.box .details{
+
+    width: 35%;
+    float: right;
+}
+img{
+    border-radius: 100px;
+
+}
+.box2{
+    border: 5px rgb(60, 172, 60) solid;
+    border-radius: 10px;
+    width:65%;
+    background-color: rgb(245, 184, 226);
+    color: rgb(62, 8, 122);  
+    padding: 35px;
+    margin: 70px;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+}
+.box2 .data2{
+    width:85%;
+    float: left;
+}
+.box2 .image2{
+    width:15%;
+    float:right
+}

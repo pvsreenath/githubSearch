@@ -1,0 +1,25 @@
+<div class="box">
+    <div class="data">
+        User name: {{details.owner.login}}<br>
+        url:{{details.owner.url}}
+    </div>
+   
+    <div class="image">
+        <img src="{{details.owner.avatar_url}}" width="100px"/>
+    </div>
+</div>
+<div class="box2" >
+    <div class="data">
+       <h1>{{details.name}}</h1> 
+    </div>
+    
+    <div class="info">
+
+        Repository name: {{details.name}}<br>
+        Id: {{details.id}}<br>
+        Issues : {{details.open_issues}}<br>
+        Subscribers : {{details.subscribers_count}}<br>
+        git url : {{details.git_url}}<br>
+
+    </div>
+</div>

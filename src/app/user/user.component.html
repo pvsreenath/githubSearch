@@ -1,0 +1,65 @@
+
+    <div class="search">
+        <h1>WELCOME TO GITHUB SEARCH</h1>
+        <div class="input">
+            <input type="text" #username name="username"  name="username" placeholder="Enter here to search..."><br><br>
+        </div>
+        <div class="option">
+            <b>select Users or Repositories</b>
+            <select #type>
+                <option value="users">Users</option>
+                <option value="repositories">Repositories</option>
+            </select>
+        </div>
+        <div class="btn">
+            <button (click)="getData(username.value,type.value)">SEARCH</button>
+        </div>
+    </div>
+
+<div class="pagination">
+    <pagination-controls  id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+</div>
+<div *ngIf = "type.value=='users'; then thenBlock; else elseBlock"></div>
+  <ng-template #thenBlock>
+    <div  (click)="onSelect(user.login)" *ngFor="let user of users.items | paginate: { id: 'listing_pagination',
+itemsPerPage: 10,
+currentPage: page,
+totalItems: totalRec }">
+  
+    <div class="users">
+        <div class="box">
+          <div class="data">
+              Username : {{user.login}}<br>
+              User Repos :{{user.repos_url}}    
+          </div>
+          <div class="image">
+              <img src="{{user.avatar_url}}" width="100px"/>
+          </div>
+         
+      </div>
+    </div>     
+</div>
+
+  </ng-template>
+  
+  <ng-template #elseBlock>
+    <div (click)="onClick(repo.owner.login,repo.name)" *ngFor="let repo of repos.items | paginate: { id: 'listing_pagination',
+    itemsPerPage: 10,
+    currentPage: page,
+    totalItems: totalRec }">
+            <div class="box">
+                <div class="data">
+                    Repository name :{{repo.name}}<br>
+                    Owner name :{{repo.owner.login}} <br>  
+                    issues :{{repo.open_issues}} 
+                </div>
+                <div class="image">
+                    <img src="{{repo.owner.avatar_url}}" width="100px"/>
+                </div>
+               
+            </div>
+   
+    </div>   
+  </ng-template>
+
+

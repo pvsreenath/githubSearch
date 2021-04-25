@@ -1,0 +1,41 @@
+<div class="users">
+    <div class="box">
+        <div class="data">
+            <h1>{{details.login}}</h1>
+        </div>
+        <div class="image">
+            <img src="{{details.avatar_url}}" width="100px" />
+        </div>
+        <div class="details">
+            Bio: {{details.bio}}<br>
+            Company: {{details.Company}}<br>
+            followers: {{details.followers}}
+            Repositories:
+
+
+        </div>
+
+    </div>
+    <h2>Repositories</h2>
+    <div *ngFor="let repo of userRepos | paginate: { id: 'listing_pagination',
+    itemsPerPage: 10,
+    currentPage: page,
+    totalItems: totalRec }">
+
+
+        <div class="box2">
+            <div class="data2">
+                Repository name :{{repo.name}}<br>
+                Owner name :{{repo.owner.login}} <br>
+                issues :{{repo.open_issues}}
+            </div>
+            <div class="image2">
+                <img src="{{repo.owner.avatar_url}}" width="100px" />
+            </div>
+
+        </div>
+
+
+
+    </div>
+</div>
